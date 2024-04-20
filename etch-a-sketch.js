@@ -16,8 +16,6 @@ function colorChanger()//changes color of the box on when mouse is hovered
                 box.style.backgroundColor = "rgb(0, 0, 0)";
                 
             }
-
-            
             
         });
     });
@@ -26,13 +24,13 @@ function colorChanger()//changes color of the box on when mouse is hovered
 function stopPoint()
 {
     boxes.forEach((box)=>{
-        box.addEventListener("click", () => {})
+        box.addEventListener("click", () => { ;})
     })
 }
 
 let resetBtn = document.querySelector("#resetBtn")
 
-resetBtn.addEventListener("click", () =>{boxes.forEach((box)=>
-{box.style.backgroundColor = "rgb(255, 255, 255)"})
+resetBtn.addEventListener("click", () =>{boxes.forEach((box)=>{
+    resetBtn.addEventListener("click", () => {box.style.backgroundColor = "rgb(255, 255, 255)"})
 })
-
+ })
