@@ -1,5 +1,7 @@
 body{
     margin:0;
+    
+    
 }
 
 .box{
@@ -11,11 +13,12 @@ body{
     border-right: 0;
     background-color: white;
 }
+
 .container{
     
     display: flex;
     width: 90vw;
-    height: 90vh;
+    height: 70vh;
     margin:0 auto;
     justify-content: center;
     align-items: center;
@@ -40,6 +43,29 @@ body{
     padding: 10px;
     justify-content: center;
     width:20vw;
-
-
+    background-color: white;
 }
+
+.reset{
+    margin: 20px;
+    text-align: center;
+    padding:5px;
+}
+
+#resetBtn{
+    padding: 10px;
+    font-size: 20px;
+    border-radius: 20px;
+}
+
+#resetBtn:hover{
+    background-color: grey;
+}
+
+#body{
+    border:lightgrey solid 2px;
+    height:100vh;
+    margin: 0 50px;
+    background-color: aliceblue;
+}
+

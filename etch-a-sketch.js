@@ -4,7 +4,14 @@ let boxes = document.querySelectorAll(".box")
 
 boxes.forEach((box)=>{
     box.addEventListener("click", () => {colorChanger();box.style.backgroundColor = "rgb(0, 0, 0)"})
-})//starting point for sketch
+})//starting point for sketch when the mouse is clicked on a box
+
+
+
+
+
+
+
 
 
 function colorChanger()//changes color of the box on when mouse is hovered
@@ -21,16 +28,13 @@ function colorChanger()//changes color of the box on when mouse is hovered
     });
 }
 
-function stopPoint()
-{
-    boxes.forEach((box)=>{
-        box.addEventListener("click", () => { ;})
-    })
-}
+
+
+
 
 let resetBtn = document.querySelector("#resetBtn")
 
 resetBtn.addEventListener("click", () =>{boxes.forEach((box)=>{
-    resetBtn.addEventListener("click", () => {box.style.backgroundColor = "rgb(255, 255, 255)"})
+    resetBtn.addEventListener("click", () => {box.style.backgroundColor = "rgb(255, 255, 255)"; })
 })
  })
