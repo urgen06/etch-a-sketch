@@ -1,22 +1,20 @@
 body{
     margin:0;
-    
+    background-color: aliceblue;
     
 }
 
 .box{
-    padding:5px;
+    padding: 5px;
     border: solid black 2px;
-    height: 20px;
-    width:20px;
-    border-bottom: 0;
-    border-right: 0;
+    height: 100%;
+    width:100%;
     background-color: white;
 }
 
 .container{
-    
-    display: flex;
+    padding-top: 20px;
+    display: grid;
     width: 90vw;
     height: 70vh;
     margin:0 auto;
@@ -24,15 +22,6 @@ body{
     align-items: center;
 }
 
-
-
-.last-row{
-    border-bottom: 2px solid black;
-}
-
-.right-most-column{
-    border-right: 2px solid black;
-}
 
 #title{
     margin: 0 auto;
@@ -46,19 +35,19 @@ body{
     background-color: white;
 }
 
-.reset{
+.reset, .NewGrid{
     margin: 20px;
     text-align: center;
     padding:5px;
 }
 
-#resetBtn{
+#resetBtn, #NewGridBtn{
     padding: 10px;
     font-size: 20px;
     border-radius: 20px;
 }
 
-#resetBtn:hover{
+#resetBtn:hover, #NewGridBtn:hover{
     background-color: grey;
 }
 
@@ -68,4 +57,3 @@ body{
     margin: 0 50px;
     background-color: aliceblue;
 }
-

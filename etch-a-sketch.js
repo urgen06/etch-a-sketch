@@ -1,40 +1,36 @@
-let boxes = document.querySelectorAll(".box")
+const container = document.getElementById("container");
 
+function createGrid(size) {
+  container.innerHTML = "";
+  container.style.gridTemplateColumns = `repeat(${size}, 1fr)`; //equally sized number of columns of same width
+  container.style.gridTemplateRows = `repeat(${size}, 1fr)`; //equally sized number of rows of same height
 
+  for (let i = 0; i < size * size; i++) {
+    const box = document.createElement("div");
+    box.classList.add("box");
 
-boxes.forEach((box)=>{
-    box.addEventListener("click", () => {colorChanger();box.style.backgroundColor = "rgb(0, 0, 0)"})
-})//starting point for sketch when the mouse is clicked on a box
-
-
-
-
-
-
-
-
-
-function colorChanger()//changes color of the box on when mouse is hovered
-{
-    boxes.forEach((box) => {
-        box.addEventListener("mouseover", () => { 
-            if(window.getComputedStyle(box).backgroundColor == "rgb(255, 255, 255)") 
-            {
-                box.style.backgroundColor = "rgb(0, 0, 0)";
-                
-            }
-            
-        });
+    box.addEventListener("mouseover", () => {
+      box.style.backgroundColor = "black";
     });
+
+    container.appendChild(box); // add boxes inside container
+  }
 }
 
+document.getElementById("NewGridBtn").addEventListener("click", () => {
+  let size = prompt("Enter grid size (1-100):");
+  size = Number(size);
+  if (isNaN(size) || size < 1 || size > 100) { //validation
+    alert("Invalid size");
+    return;
+  }
+  createGrid(size);
+});
+
+document.getElementById("resetBtn").addEventListener("click", () => {
+  const boxes = container.querySelectorAll(".box");
+  boxes.forEach(box => box.style.backgroundColor = "white");
+});
 
 
-
-
-let resetBtn = document.querySelector("#resetBtn")
-
-resetBtn.addEventListener("click", () =>{boxes.forEach((box)=>{
-    resetBtn.addEventListener("click", () => {box.style.backgroundColor = "rgb(255, 255, 255)"; })
-})
- })
+createGrid(4); //defualt
